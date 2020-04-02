@@ -13,6 +13,9 @@
 		B6BD8F4F24351BE80078E99B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6BD8F4D24351BE80078E99B /* Main.storyboard */; };
 		B6BD8F5124351BEB0078E99B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6BD8F5024351BEB0078E99B /* Assets.xcassets */; };
 		B6BD8F5424351BEB0078E99B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6BD8F5224351BEB0078E99B /* LaunchScreen.storyboard */; };
+		B6BD8F5C24351CA00078E99B /* GymAI ActivityClassifier 1.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = B6BD8F5B24351CA00078E99B /* GymAI ActivityClassifier 1.mlmodel */; };
+		B6BD8F5E243533030078E99B /* v_BaseballPitch_g04_c02.avi in Resources */ = {isa = PBXBuildFile; fileRef = B6BD8F5D243533030078E99B /* v_BaseballPitch_g04_c02.avi */; };
+		B6BD8F6024353B560078E99B /* big_buck_bunny_720p_5mb.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = B6BD8F5F24353B560078E99B /* big_buck_bunny_720p_5mb.mp4 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		B6BD8F5024351BEB0078E99B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B6BD8F5324351BEB0078E99B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B6BD8F5524351BEB0078E99B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B6BD8F5B24351CA00078E99B /* GymAI ActivityClassifier 1.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = "GymAI ActivityClassifier 1.mlmodel"; sourceTree = "<group>"; };
+		B6BD8F5D243533030078E99B /* v_BaseballPitch_g04_c02.avi */ = {isa = PBXFileReference; lastKnownFileType = video.avi; path = v_BaseballPitch_g04_c02.avi; sourceTree = "<group>"; };
+		B6BD8F5F24353B560078E99B /* big_buck_bunny_720p_5mb.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = big_buck_bunny_720p_5mb.mp4; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +66,9 @@
 				B6BD8F4924351BE80078E99B /* SceneDelegate.swift */,
 				B6BD8F4B24351BE80078E99B /* ViewController.swift */,
 				B6BD8F4D24351BE80078E99B /* Main.storyboard */,
+				B6BD8F5F24353B560078E99B /* big_buck_bunny_720p_5mb.mp4 */,
+				B6BD8F5D243533030078E99B /* v_BaseballPitch_g04_c02.avi */,
+				B6BD8F5B24351CA00078E99B /* GymAI ActivityClassifier 1.mlmodel */,
 				B6BD8F5024351BEB0078E99B /* Assets.xcassets */,
 				B6BD8F5224351BEB0078E99B /* LaunchScreen.storyboard */,
 				B6BD8F5524351BEB0078E99B /* Info.plist */,
@@ -127,6 +136,8 @@
 			files = (
 				B6BD8F5424351BEB0078E99B /* LaunchScreen.storyboard in Resources */,
 				B6BD8F5124351BEB0078E99B /* Assets.xcassets in Resources */,
+				B6BD8F6024353B560078E99B /* big_buck_bunny_720p_5mb.mp4 in Resources */,
+				B6BD8F5E243533030078E99B /* v_BaseballPitch_g04_c02.avi in Resources */,
 				B6BD8F4F24351BE80078E99B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -138,6 +149,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6BD8F5C24351CA00078E99B /* GymAI ActivityClassifier 1.mlmodel in Sources */,
 				B6BD8F4C24351BE80078E99B /* ViewController.swift in Sources */,
 				B6BD8F4824351BE80078E99B /* AppDelegate.swift in Sources */,
 				B6BD8F4A24351BE80078E99B /* SceneDelegate.swift in Sources */,
