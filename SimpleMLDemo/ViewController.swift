@@ -27,11 +27,6 @@ class ViewController: UIViewController {
     /// - Tag: MLModelSetup
     lazy var classificationRequest: VNCoreMLRequest = {
         do {
-            /*
-             Use the Swift class `MobileNet` Core ML generates from the model.
-             To use a different Core ML classifier model, add it to the project
-             and replace `MobileNet` with that model's generated Swift class.
-             */
             let model = try VNCoreMLModel(for: GymAI_ActivityClassifier_1().model)
             let request = VNCoreMLRequest(model: model, completionHandler: { [weak self] request, error in
                 self?.processClassifications(for: request, error: error)
@@ -50,6 +45,9 @@ class ViewController: UIViewController {
         }
     }
     
+    /**
+     *This is just a test functions that uses a local memorized video 
+     */
     func processLocalVideo(){
         let path = Bundle.main.path(forResource: "big_buck_bunny_720p_5mb", ofType: "mp4")
         videoURL = URL(fileURLWithPath: path!)
@@ -105,14 +103,6 @@ class ViewController: UIViewController {
                 self.predictions.append(classifications[0])
                 let bestPrediction = self.evaluateLastPredictions()
                 self.predictionLabel.text = bestPrediction?.identifier
-                /*
-                let topClassifications = classifications.prefix(2)
-                let descriptions = topClassifications.map { classification in
-                    // Formats the classification for display; e.g. "(0.37) cliff, drop, drop-off".
-                   return String(format: "  (%.2f) %@", classification.confidence, classification.identifier)
-                }
-                self.predictionLabel.text = "Classification:\n" + descriptions.joined(separator: "\n")
-                */
             }
         }
     }
@@ -168,9 +158,6 @@ class ViewController: UIViewController {
         generator = AVAssetImageGenerator(asset: asset)
         generator.appliesPreferredTrackTransform = true
         frames = []
-//        for index: Int in stride(from: 0, to: Int(duration), by: step) {
-//           getFrame(fromTime: Float64(index))
-//        }
         for index: Int in 0 ..< Int(duration) {
             self.getFrame(fromTime:Float64(index))
         }
@@ -196,7 +183,7 @@ class ViewController: UIViewController {
 extension ViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        videoURL = info[.mediaURL] as! URL
+        videoURL = info[.mediaURL] as? URL
         print(videoURL!)
         if videoURL != nil {
             getFramesFromVideo(videoUrl: videoURL! as URL)
