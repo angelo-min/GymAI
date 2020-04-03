@@ -2,4 +2,4 @@
 Our activity model classifier
 
 ## Description
-Put description here
+This is the repository of our activity model classifier. We made a video classifier using image classification and a buffering of descriptions. 
