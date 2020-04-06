@@ -24,6 +24,7 @@ class ViewController: UIViewController {
     var predictions: [VNClassificationObservation] = []
     var generator: AVAssetImageGenerator!
     var video: AVAsset? = nil
+    var bestPrediction: VNClassificationObservation? = nil
     /// - Tag: MLModelSetup
     lazy var classificationRequest: VNCoreMLRequest = {
         do {
@@ -40,9 +41,6 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        DispatchQueue.main.async {
-            self.processLocalVideo()
-        }
     }
     
     /**
@@ -100,9 +98,15 @@ class ViewController: UIViewController {
                 self.predictionLabel.text = "Nothing recognized."
             } else {
                 // Display top classifications ranked by confidence in the UI.
-                self.predictions.append(classifications[0])
-                let bestPrediction = self.evaluateLastPredictions()
-                self.predictionLabel.text = bestPrediction?.identifier
+                if classifications[0].confidence > 0.7 {
+                    self.predictions.append(classifications[0])
+                    self.bestPrediction = self.evaluateLastPredictions()
+                }
+                if self.bestPrediction != nil {
+                    self.predictionLabel.text = self.bestPrediction?.identifier
+                } else {
+                    self.predictionLabel.text = "Not sure"
+                }
             }
         }
     }
