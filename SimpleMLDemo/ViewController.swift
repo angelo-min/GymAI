@@ -98,15 +98,9 @@ class ViewController: UIViewController {
                 self.predictionLabel.text = "Nothing recognized."
             } else {
                 // Display top classifications ranked by confidence in the UI.
-                if classifications[0].confidence > 0.7 {
-                    self.predictions.append(classifications[0])
-                    self.bestPrediction = self.evaluateLastPredictions()
-                }
-                if self.bestPrediction != nil {
-                    self.predictionLabel.text = self.bestPrediction?.identifier
-                } else {
-                    self.predictionLabel.text = "Not sure"
-                }
+                self.predictions.append(classifications[0])
+                self.bestPrediction = self.evaluateLastPredictions()
+                self.predictionLabel.text = self.bestPrediction?.identifier
             }
         }
     }
