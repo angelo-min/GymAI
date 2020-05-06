@@ -49,7 +49,7 @@ class ViewController: UIViewController {
     func processLocalVideo(){
         let path = Bundle.main.path(forResource: "big_buck_bunny_720p_5mb", ofType: "mp4")
         videoURL = URL(fileURLWithPath: path!)
-        print(videoURL)
+        print(videoURL ?? "")
         if videoURL != nil {
             print("Url works")
             getFramesFromVideo(videoUrl: videoURL! as URL)
