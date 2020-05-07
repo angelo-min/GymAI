@@ -43,6 +43,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AEB453A6246377D20061A326 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B6BD8F5F24353B560078E99B /* big_buck_bunny_720p_5mb.mp4 */,
+				B6BD8F5D243533030078E99B /* v_BaseballPitch_g04_c02.avi */,
+				B6BD8F5B24351CA00078E99B /* GymAI ActivityClassifier 1.mlmodel */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		B6BD8F3B24351BE80078E99B = {
 			isa = PBXGroup;
 			children = (
@@ -62,13 +72,11 @@
 		B6BD8F4624351BE80078E99B /* SimpleMLDemo */ = {
 			isa = PBXGroup;
 			children = (
+				AEB453A6246377D20061A326 /* Resources */,
 				B6BD8F4724351BE80078E99B /* AppDelegate.swift */,
 				B6BD8F4924351BE80078E99B /* SceneDelegate.swift */,
 				B6BD8F4B24351BE80078E99B /* ViewController.swift */,
 				B6BD8F4D24351BE80078E99B /* Main.storyboard */,
-				B6BD8F5F24353B560078E99B /* big_buck_bunny_720p_5mb.mp4 */,
-				B6BD8F5D243533030078E99B /* v_BaseballPitch_g04_c02.avi */,
-				B6BD8F5B24351CA00078E99B /* GymAI ActivityClassifier 1.mlmodel */,
 				B6BD8F5024351BEB0078E99B /* Assets.xcassets */,
 				B6BD8F5224351BEB0078E99B /* LaunchScreen.storyboard */,
 				B6BD8F5524351BEB0078E99B /* Info.plist */,
